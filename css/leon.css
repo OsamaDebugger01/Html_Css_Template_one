@@ -20,8 +20,7 @@
     font-family: "Work Sans", sans-serif;
   }
   .container {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 auto;
     margin:0 auto;
   }
 /* Start Component */
@@ -136,13 +135,16 @@ header .links ul li a:hover {
 .landing{
   background-image: url(../images/landing.jpg);
   background-size: cover;
+  height: calc(100vh - 64px);
 }
 .landing .intro-text{
-  height: calc(100vh - 64px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  max-width: 100%;
 }
 .landing .intro-text h1{
   margin: 0;
@@ -151,8 +153,7 @@ header .links ul li a:hover {
   font-weight: bold;
 }
 .landing .intro-text p{
-  font-size: 25px;
-  font-weight: 400;
+  font-size: 19px;
   line-height: 1.8;
 }
 /* End Landing */
